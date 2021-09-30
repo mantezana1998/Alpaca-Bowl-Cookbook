@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema ({
     review: String,
-    rating: Number
+    rating: Number //WHAT THE FUCK IS GOING ON 
 });
 
 module.exports = mongoose.model('Review', reviewSchema);
