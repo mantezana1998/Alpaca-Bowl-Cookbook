@@ -18,6 +18,7 @@ require('./config/database');
 // configure Passport
 require('./config/passport');
 
+
 var indexRoutes = require('./routes/index')
 
 // view engine setup
