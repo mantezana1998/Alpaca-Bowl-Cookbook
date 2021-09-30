@@ -1,5 +1,9 @@
 const Chef = require('../models/chef');
 
-module.exports = {
+// module.exports = {
+//     //fuckkkkkkkk
+// }
+
+function create (){
     
 }
