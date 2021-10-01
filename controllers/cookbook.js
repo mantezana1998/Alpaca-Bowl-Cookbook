@@ -1,20 +1,18 @@
-const Chef = require('../models/chef');
+const Recipe = require('../models/recipe');
 
 module.exports = {
-    // all: allRecipes,
-    // show
-    index
+    // index
+    all: allRecipe
 };
 
-function index(req, res){
-    Chef.find({}, function (err, chefDoc) {
-        console.log(chefDoc, "<- chefDocument")
-    //     res.render('cookbook/index', {
-    //     })
-    // });
-    });
+function allRecipe(req, res){
+    res.render('cookbook/index');
+}
 
-// function allRecipes(req, res){
-//     res.render('cookbook/show');
-// };
-
+// function index(req, res){
+//     Recipe.find({}, function (err, chefDoc) {
+//         console.log(req.body, "<- chefDocument")
+//         res.render('cookbook/index', {
+//         });
+//     })
+// }

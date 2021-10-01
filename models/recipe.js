@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 const reviewSchema = new mongoose.Schema ({
     chefFirst: String,
     chefLast: String,
@@ -5,7 +7,6 @@ const reviewSchema = new mongoose.Schema ({
     rating: Number
 })
 
-// Create your User Model
 const recipeSchema = new mongoose.Schema ({
     recipe: String,
     ingredient: String,
