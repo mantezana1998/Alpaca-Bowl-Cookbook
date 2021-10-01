@@ -10,10 +10,11 @@
     <h1>Alpaca Bowl</h1>
     <h3>Let's Eat</h3>
     <div>
+        <% if(user) { %>
+          <a href="/auth/google"> Login with Google</a>
+        <% }else{ %>
         <a href="/auth/google"> Login with Google</a>
-    </div>
-    <div>
-        <a href="/logout">Log out</a>
+        <% } %>
     </div>
     <div>
         <a href="/auth/google">Learn More</a>
