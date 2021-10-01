@@ -1,7 +1,7 @@
 var router = require('express').Router();
-var recipeCtrl = require('../controllers/recipes');
+var recipeCtrl = require('../controllers/cookbook');
 
-router.get('/', recipeCtrl.new);
-router.get('/land', recipeCtrl.new)
+router.get('/', recipeCtrl.index);
+// router.get('/:id', recipeCtrl.show);
 
 module.exports = router; 
