@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lomo Saltado</title>
 </head>
 <body>
     <h1>Lomo Saltado</h1>
-    <h2>Description of Lomo Saltado</h2>
     <h3>Ingredients are: blah blah blah</h3>
-    <h3>Directions: just make it</h3>
+    <h3>Instructions: just make it</h3>
+    <h2>Description of Lomo Saltado</h2>
+    
+    
+    <br><h2>Leave a Review!</h2>
+<form id="add-review-form" method="POST">
+    <label>Enter Review Here:</label>
+    <input type="text"></input>
+    <br>
+    <label>Rating:</label>
+    <select name="rating">
+        <option value="hate">Hate it!</option>
+        <option value="dont like">Don't Like</option>
+        <option value="okay">Okay</option>
+        <option value="yummy">Yummy</option>
+        <option value="delicious" selected>Delicious!</option>
+    </select>
+    <input type="submit" value="Add Review">
+</form>
 </body>
 </html>
