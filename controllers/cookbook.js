@@ -1,12 +1,16 @@
 const Recipe = require('../models/recipe');
 
 module.exports = {
-    // index
-    all: allRecipe
+    all: allRecipe,
+    show
 };
 
 function allRecipe(req, res){
     res.render('cookbook/index');
+}
+
+function show(req, res){
+    res.send('Show function message')
 }
 
 // function index(req, res){

@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const Chef = require('../models/chef');
+const Chef = require('../models/user');
 //Require your User Model here!
 
 // configuring Passport!

@@ -1,6 +1,6 @@
-var router = require('express').Router();
-var landCtrl = require('../controllers/land');
+// var router = require('express').Router();
+// var landCtrl = require('../controllers/land');
 
-router.get('/', landCtrl.all)
+// router.get('/', landCtrl.all)
 
-module.exports = router; 
+// module.exports = router; 

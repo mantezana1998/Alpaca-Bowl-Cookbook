@@ -1,9 +1,9 @@
-const Recipe = require('../models/recipe');
+// const Recipe = require('../models/recipe');
 
-module.exports = {
-    all: allLand
-};
+// module.exports = {
+//     all: allLand
+// };
 
-function allLand(req, res){
-    res.render('cookbook/land');
-}
+// function allLand(req, res){
+//     res.render('cookbook/land');
+// }

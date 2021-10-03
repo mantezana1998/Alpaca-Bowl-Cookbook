@@ -1,4 +1,4 @@
-const Chef = require('../models/chef');
+const Chef = require('../models/user');
 
 module.exports = {
   index,
@@ -11,7 +11,7 @@ function addFact(req, res){
    // req.user is a mongoose document
    // where did we assign the mongoose document to req.user
   req.user.save(function(err){
-    res.redirect('/chef')
+    res.redirect('/user')
   })
 }
 

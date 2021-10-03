@@ -21,8 +21,8 @@ require('./config/passport');
 
 var indexRoutes = require('./routes/index');
 var cookbookRoutes = require('./routes/cookbook');
-var landRoutes = require('./routes/land');
-var seaRoutes = require('./routes/sea');
+// var landRoutes = require('./routes/land');
+// var seaRoutes = require('./routes/sea');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -55,8 +55,8 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/cookbook', cookbookRoutes);
-app.use('/land', landRoutes);
-app.use('/sea', seaRoutes);
+// app.use('/land', landRoutes);
+// app.use('/sea', seaRoutes);
 
 
 // invalid request, send 404 page
