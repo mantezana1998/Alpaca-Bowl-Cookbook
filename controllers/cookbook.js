@@ -10,9 +10,10 @@ function allRecipe(req, res){
 }
 
 function show(req, res){
-    Recipe.find({}, function(err, recipe){
-       console.log(recipe, '<- recipe');
-       res.render('cookbook/show', {
+    Recipe.find({slug:req.params.slug}, function(err, recipe){
+        console.log(req.params.slug, '<- slug id');
+        console.log(recipe, '<- recipe');
+        res.render('cookbook/show', {
            recipeForCookbook: recipe
        }); 
     });
