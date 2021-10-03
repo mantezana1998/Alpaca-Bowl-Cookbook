@@ -10,13 +10,9 @@ function allRecipe(req, res){
 }
 
 function show(req, res){
-    res.send('Show function message')
+    Recipe.findById(req.params.id)
+    .exec(function(err, recipe){
+        console.log(recipe);
+        res.render('cookbook/show');
+    })
 }
-
-// function index(req, res){
-//     Recipe.find({}, function (err, chefDoc) {
-//         console.log(req.body, "<- chefDocument")
-//         res.render('cookbook/index', {
-//         });
-//     })
-// }
