@@ -1,18 +1,20 @@
-<section id="recipe-page">
-    <div>Recipe:</div>
-    <div><%= recipe.recipe %></div>
+<section id="recipe-page">  
+  <div>Recipe:</div>
+    <div><%= recipeForCookbook.recipe %></div>
     <div>Ingredient:</div>
-    <div><%= recipe.ingredient %></div>
+    <div><%= recipeForCookbook.ingredient %></div>
+    <div>Instruction:</div>
+    <div><%= recipeForCookbook.instruction %></div>
     <div>Description:</div>
-    <div><%= recipe.description %></div>
+    <div><%= recipeForCookbook.description %></div>
   </section>
   
-  <br /><br />
-  <h2>Reviews</h2>
+  <br><br>
+  <h2>How did you like it?</h2>
   <form
     id="add-review-form"
     method="POST"
-    action="/cookbook/<%= recipe._id %>"
+    action="/cookbook/<%= recipeForCookbook._id %>"
   >
     <label>Review:</label>
     <textarea name="description"></textarea>
@@ -29,26 +31,4 @@
   </form>
   
   
-  <% if (recipe.reviews.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Review</th>
-          <th>Rating</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% recipe.reviews.forEach(function(r) { %>
-          <tr>
-            <td><%= r.createdAt.toLocaleDateString() %></td>
-            <td><%= r.description %></td>
-            <td><%= r.rating %></td>
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h5>No Reviews Yet</h5>
-  <% } %>
   

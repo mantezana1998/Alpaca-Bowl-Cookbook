@@ -10,9 +10,11 @@ function allRecipe(req, res){
 }
 
 function show(req, res){
-    Recipe.findById(req.params.id)
-    .exec(function(err, recipe){
-        console.log(recipe);
-        res.render('cookbook/show');
-    })
+    Recipe.find({}, function(err, recipe){
+       console.log(recipe, '<- recipe');
+       res.render('cookbook/show', {
+           recipeForCookbook: recipe
+       }); 
+    });
 }
+
