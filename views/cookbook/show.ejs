@@ -14,7 +14,7 @@
   <form
     id="add-review-form"
     method="POST"
-    action="/cookbook/<%= recipe._id %>"
+    action="/cookbook/<%= recipe._id %>/reviews"
   >
     <label>Review:</label>
     <textarea name="description"></textarea>
@@ -29,6 +29,5 @@
     </select>
     <input type="submit" value="Add Review" />
   </form>
-  
   
   

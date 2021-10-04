@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema ({
-    chefFirst: String,
-    chefLast: String,
+    name: String,
     description: String, 
     rating: Number
 })
