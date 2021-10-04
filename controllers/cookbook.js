@@ -17,6 +17,7 @@ function show(req, res){
         // console.log(typeof recipe);
         res.render('cookbook/show', {
            recipe: recipe,
+           slug: req.params.slug
        }); 
     });
 }

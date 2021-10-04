@@ -7,7 +7,7 @@ module.exports = {
 function create (req, res) {
     console.log(req.body, '<-- req.body')
     console.log(req.params, "<-- req.paramssssss")
-    Recipe.findById(req.params.id, function(err, recipe){
+    Recipe.findOne({slug:req.params.slug}, function(err, recipe){
         if(err){
             console.log(err)
             return res.send(err)
@@ -15,7 +15,7 @@ function create (req, res) {
         console.log(recipe, "<-- recipeeeeeee")
         recipe.review.push(req.body);
         recipe.save(function(err){
-            res.redirect(`/cookbook/${req.params.id}`)
+            res.redirect(`/cookbook/${req.params.slug}`)
         })
     })
 }
