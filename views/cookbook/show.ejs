@@ -1,12 +1,12 @@
-<section id="recipe-page">  
+<section id="show-page">  
   <div>Recipe:</div>
-    <div><%= recipeForCookbook.recipe %></div>
+    <div><%= recipe.recipe %></div>
     <div>Ingredient:</div>
-    <div><%= recipeForCookbook.ingredient %></div>
+    <div><%= recipe.ingredient %></div>
     <div>Instruction:</div>
-    <div><%= recipeForCookbook.instruction %></div>
+    <div><%= recipe.instruction %></div>
     <div>Description:</div>
-    <div><%= recipeForCookbook.description %></div>
+    <div><%= recipe.description %></div>
   </section>
   
   <br><br>
@@ -14,7 +14,7 @@
   <form
     id="add-review-form"
     method="POST"
-    action="/cookbook/<%= recipeForCookbook.slug %>"
+    action="/cookbook/<%= recipe._id %>"
   >
     <label>Review:</label>
     <textarea name="description"></textarea>

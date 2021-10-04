@@ -10,11 +10,13 @@ function allRecipe(req, res){
 }
 
 function show(req, res){
-    Recipe.find({slug:req.params.slug}, function(err, recipe){
-        console.log(req.params.slug, '<- slug id');
-        console.log(recipe, '<- recipe');
+    Recipe.findOne({slug:req.params.slug}, function(err, recipe){
+        console.log(req.params.slug, '<---- slug id');
+        console.log(recipe.recipe, '<---- recipe');
+        console.log(recipe, "recipeeeeeee");
+        console.log(typeof recipe);
         res.render('cookbook/show', {
-           recipeForCookbook: recipe
+           recipe: recipe,
        }); 
     });
 }
