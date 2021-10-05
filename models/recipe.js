@@ -5,7 +5,7 @@ const reviewSchema = new mongoose.Schema ({
     description: String, 
     rating: Number,
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
-})
+});
 
 const recipeSchema = mongoose.Schema ({
     recipe: String,

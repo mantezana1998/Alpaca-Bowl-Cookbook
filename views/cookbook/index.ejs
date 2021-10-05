@@ -8,8 +8,10 @@
     <title>Recipes</title>
 </head>
 <body>
-    <a id='land' href="/cookbook/lomo-saltado">Land</a>
-    <a id='sea' href="/cookbook/ceviche">Sea</a>
+    <% recipe.forEach(function(r){ %> 
+    <a id='land' href="/cookbook/<%= r._id %> ">Land</a>
+    <a id='sea' href="/cookbook/<%= r_.id %> ">Sea</a>
+    <% }); %> 
 </body>
 </html>
 

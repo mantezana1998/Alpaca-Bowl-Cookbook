@@ -1,24 +1,30 @@
 const Recipe = require('../models/recipe');
 
 module.exports = {
-    all: allRecipe,
-    show
+    index
+    // show
 };
 
-function allRecipe(req, res){
-    res.render('cookbook/index');
-}
-
-function show(req, res){
-    Recipe.findOne({slug:req.params.slug}, function(err, recipe){
-        // console.log(req.params.slug, '<---- slug id');
-        // console.log(recipe.recipe, '<---- recipe');
-        // console.log(recipe, "recipeeeeeee");
-        // console.log(typeof recipe, "<-- type of");
-        res.render('cookbook/show', {
-           recipe: recipe,
-           slug: req.params.slug
-       }); 
+function index (req, res){
+    Recipe.find({}, function(err, recipeDocuments){
+        console.log(recipeDocuments, "<---recipe documents");
+        console.log(err, '<---erorrrrrrr')
+        res.render('cookbook/index', {
+            recipe: recipeDocuments
+        });
     });
 }
+
+// function show(req, res){
+//     Recipe.findById({id:req.params.id}, function(err, recipe){
+//         console.log(req.params.id, '<---- req.params id');
+//         console.log(recipe.recipe, '<---- recipe');
+//         console.log(recipe, "recipeeeeeee");
+//         console.log(typeof recipe, "<-- type of");
+//         res.render('cookbook/show', {
+//            recipe: recipe,
+//            id: req.params.id,
+//        }); 
+//     });
+// }
 
