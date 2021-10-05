@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const reviewSchema = new mongoose.Schema ({
     name: String,
     description: String, 
-    rating: Number
+    rating: Number,
+    userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 })
 
 const recipeSchema = mongoose.Schema ({
@@ -12,7 +13,8 @@ const recipeSchema = mongoose.Schema ({
     ingredient: String,
     instruction: String,
     description: String,
-    review: [reviewSchema]
+    review: [reviewSchema],
+    userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 });
 
 module.exports = mongoose.model('Recipe', recipeSchema);

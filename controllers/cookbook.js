@@ -14,7 +14,7 @@ function show(req, res){
         // console.log(req.params.slug, '<---- slug id');
         // console.log(recipe.recipe, '<---- recipe');
         // console.log(recipe, "recipeeeeeee");
-        // console.log(typeof recipe);
+        // console.log(typeof recipe, "<-- type of");
         res.render('cookbook/show', {
            recipe: recipe,
            slug: req.params.slug
