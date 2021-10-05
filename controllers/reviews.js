@@ -1,8 +1,10 @@
 const Recipe = require('../models/recipe');
 
 module.exports = {
-    create
+    create,
+    delete: deleteComment
 };
+
 
 function create (req, res) {
     // console.log(req.body, '<-- req.body')
@@ -16,6 +18,24 @@ function create (req, res) {
         recipe.review.push(req.body);
         recipe.save(function(err){
             res.redirect(`/cookbook/${req.params.id}`)
-        })
-    })
+        });
+    });
+}
+
+function deleteComment(req, res){
+    // console.log(req, "<-- My req.body")
+    Recipe.findById({'review._id':req.params.id}, function(err, recipe){
+        console.log(recipe, "<-recipee")
+        const reviewSubdoc = recipe.review.id(req.params.id);
+        console.log(reviewSubdoc, '<-- review subdoc');
+        if(!reviewSubdoc.userId.equals(req.user._id)){
+            return res.redirect(`/cookbook/${recipe._id}`)
+        };
+        reviewSubdoc.remove();
+        recipe.save(function(err){
+            res.redirect(`/cookbook/${recipe._id}`,{
+                recipe: reviewSubdoc  
+            });
+        });
+    });
 }

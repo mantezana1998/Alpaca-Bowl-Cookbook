@@ -7,8 +7,8 @@ module.exports = {
 
 function index (req, res){
     Recipe.find({}, function(err, recipeDocuments){
-        console.log(recipeDocuments, "<---recipe documents");
-        console.log(err, '<---erorrrrrrr')
+        // console.log(recipeDocuments, "<---recipe documents");
+        // console.log(err, '<---erorrrrrrr')
         res.render('cookbook/index', {
             recipe: recipeDocuments
         });

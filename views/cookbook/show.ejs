@@ -57,3 +57,14 @@
     <h5>No Reviews Yet</h5>
   
     <% } %>
+
+<% recipe.review.forEach(function(r) { %>
+  <div class="comment">
+    <%= r._id %> 
+    <%= r.description %>
+    <%= r.rating %> <br>
+      <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+        <button type="submit">X</button>
+      </form>
+  </div>
+<% }) %>
