@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookbook</title>
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+    <title>Alpaca Bowl Cookbook</title>
 </head>
 <body>
-    <h1>Alpaca Bowl</h1>
-    <h3>Let's Eat</h3>
-    <div>
+    <h1 class='title'>Alpaca Bowl</h1>
+    <h3 id='lets-eat'>Quote here</h3>
+    <h3 id='quote'>Quote here</h3>
+
+    <div class='header'>
         <% if(user) { %>
-          <a href="/auth/google"> Login with Google</a>
+          <a href="/auth/google">Login</a>
         <% }else{ %>
-        <a href="/auth/google"> Login with Google</a>
+        <a href="/auth/google"> Login</a>
         <% } %>
-    </div>
-    <div>
-        <a href="/auth/google">Learn More</a>
     </div>
 </body>
 </html>
+

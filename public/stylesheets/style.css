@@ -1,20 +1,39 @@
-.brand-logo {
-  margin-left: 15px;
+body{
+  background-image: url('https://i.imgur.com/OKN8Mu8.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas: 
+  'header header header'
+  'quote title eat'
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+.title {
+  padding-top: 30px;
+  grid-area: title;
+  align-items: center;
+  justify-self: center;
 }
 
-#search-row form {
-  padding-top: 20px;
+.header {
+  grid-area: header;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  color: white;
+  font-size: 30px;
 }
 
-.student-name {
-  position: relative;
-  top: -5px;
+#lets-eat{
+  grid-area: eat;
 }
 
-.collection-item form {
-  margin-top: -5px;
+#quote{
+  grid-area: quote;
+  align-items: center;
+  justify-self: center;
 }
