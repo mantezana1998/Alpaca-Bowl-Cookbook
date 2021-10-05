@@ -9,9 +9,19 @@
 </head>
 <body>
     <% recipe.forEach(function(r){ %> 
-    <a id='land' href="/cookbook/<%= r._id %> ">Land</a>
-    <a id='sea' href="/cookbook/<%= r_.id %> ">Sea</a>
+    
+        <ul>
+            <h1>
+                <%= r.recipe %>
+            </h1>
+            <a href="/cookbook/<%= r._id %> ">
+                Recipe
+            </a>
+        </ul>
+
     <% }); %> 
 </body>
 </html>
 
+<!-- <a id='land' href="/cookbook/ ">Land</a>
+    <a id='sea' href="/cookbook/ ">Sea</a> -->

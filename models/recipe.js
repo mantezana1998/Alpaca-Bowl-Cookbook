@@ -7,7 +7,7 @@ const reviewSchema = new mongoose.Schema ({
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 });
 
-const recipeSchema = mongoose.Schema ({
+const recipeSchema = new mongoose.Schema ({
     recipe: String,
     slug: String,
     ingredient: String,
