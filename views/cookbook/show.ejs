@@ -60,10 +60,11 @@
 
 <% recipe.review.forEach(function(r) { %>
   <div class="comment">
+    <%= r.userId %> 
     <%= r._id %> 
     <%= r.description %>
     <%= r.rating %> <br>
-      <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+    <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
         <button type="submit">X</button>
       </form>
   </div>
