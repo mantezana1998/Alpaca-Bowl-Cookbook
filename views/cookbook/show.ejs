@@ -79,24 +79,23 @@
 
   <% recipe.review.forEach(function(r){ %> 
     <div>
-      <input type="text" 
-        name="description" 
-        value="<%= r.description %>"
-      >
-      <select name="rating" 
-        value='<%= r.rating %>'
-        >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5" selected>5</option>
-      </select>
       <form action="/reviews/<%= r._id %>?_method=PUT"    method="POST">
         <button type='submit'>Update Comment</button>
+        <input type="text" 
+          name="description" 
+          value="<%= r.description %>"
+        >
+        <select name="rating" 
+        value='<%= r.rating %>'
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option>
+        </select>
       </form>
     </div>
-
   <% }) %>
 </body>
 </html><section id="show-page">  

@@ -47,7 +47,8 @@ function updateReview(req, res){
     Recipe.findOne({'review._id': req.params.id}, function(err, recipe){
         const reviewSubdoc = recipe.review.id(req.params.id);
         if(!reviewSubdoc.userId.equals(req.user._id)) return res.redirect(`/cookbook/${recipe._id}`);
-        reviewSubdoc.review = req.body.review;
+        reviewSubdoc.description = req.body.description;
+        reviewSubdoc.rating = parseInt(req.body.rating);
         recipe.save(function(err){
             res.redirect(`/cookbook/${recipe._id}`);
         });
