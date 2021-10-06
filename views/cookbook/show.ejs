@@ -1,4 +1,13 @@
-<section id="show-page">  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/show/style.css"/>
+  <title>Recipe</title>
+</head>
+<body>
   <div>
     <a href="/cookbook">
       Back
@@ -20,7 +29,7 @@
     id="add-review-form"
     method="POST"
     action="/cookbook/<%= id %>/reviews"
-  >
+    >
     <label>Review:</label>
     <textarea name="description"></textarea>
     <label>Rating:</label>
@@ -58,14 +67,16 @@
   
     <% } %>
 
-<% recipe.review.forEach(function(r) { %>
-  <div class="comment">
-    <%= r.userId %> 
-    <%= r._id %> 
-    <%= r.description %>
-    <%= r.rating %> <br>
-    <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-        <button type="submit">X</button>
-      </form>
-  </div>
-<% }) %>
+  <% recipe.review.forEach(function(r) { %>
+    <div class="comment">
+      <%= r.userId %> 
+      <%= r._id %> 
+      <%= r.description %>
+      <%= r.rating %> <br>
+      <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button>
+        </form>
+    </div>
+  <% }) %>
+</body>
+</html><section id="show-page">  

@@ -14,6 +14,7 @@ function create (req, res) {
             console.log(err)
             return res.send(err)
         }
+        console.log(req.user,"<- REQ USER")
         req.body.userId = req.user._id;
         req.body.userName = req.user.name;
         // console.log(recipe, "<-- recipeeeeeee")
@@ -31,9 +32,9 @@ function deleteComment(req, res){
         const reviewSubdoc = recipe.review.id(req.params.id);
         console.log(req.user)
         console.log(reviewSubdoc, '<-- review subdoc');
-        // if(!reviewSubdoc.userId.equals(req.user._id)){
-        //     return res.redirect(`/cookbook/${recipe._id}`)
-        // };
+        if(!reviewSubdoc.userId.equals(req.user._id)){
+            return res.redirect(`/cookbook/${recipe._id}`)
+        };
         reviewSubdoc.remove();
         recipe.save(function(err){
             res.redirect(`/cookbook/${recipe._id}`);
