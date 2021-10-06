@@ -8,12 +8,18 @@
     <title>Recipes</title>
 </head>
 <body>
+    <div>
+        <a href="/">
+            Return
+        </a>
+    </div>
     <% recipe.forEach(function(r){ %> 
     
         <ul>
-            <h1>
+            <h1 id='recipe-title'>
                 <%= r.recipe %>
             </h1>
+
             <a href="/cookbook/<%= r._id %> ">
                 Recipe
             </a>

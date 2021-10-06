@@ -2,6 +2,35 @@ body {
     background-image: url('https://i.imgur.com/OKN8Mu8.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive;
     height: 100vh;
+    text-align: center;
+}
+
+body > div:nth-child(1){
+    display: inline-block;
+    transform: translateX(501px) translateY(-4px);
+}
+
+#recipe-title{
+    background-color: black;
+    color: white;
+    width: 219px;
+    transform: translateX(411px) translateY(9px);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 30px;
+}
+
+ul > a{
+    background-color: white;
+    color: black;
+    display: inline-block;
+    width: 71px;
+}
+
+a:hover{
+    background: red;
+    color: white;
 }
