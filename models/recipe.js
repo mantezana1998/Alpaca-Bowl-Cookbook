@@ -10,8 +10,8 @@ const reviewSchema = new mongoose.Schema ({
 const recipeSchema = new mongoose.Schema ({
     recipe: String,
     slug: String,
-    ingredient: String,
-    instruction: String,
+    ingredient: Array,
+    instruction: Array,
     description: String,
     review: [reviewSchema],
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
