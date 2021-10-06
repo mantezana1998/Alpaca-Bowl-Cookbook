@@ -48,7 +48,7 @@ function updateReview(req, res){
         const reviewSubdoc = recipe.review.id(req.params.id);
         if(!reviewSubdoc.userId.equals(req.user._id)) return res.redirect(`/cookbook/${recipe._id}`);
         reviewSubdoc.review = req.body.review;
-        Recipe.save(function(err){
+        recipe.save(function(err){
             res.redirect(`/cookbook/${recipe._id}`);
         });
     });
