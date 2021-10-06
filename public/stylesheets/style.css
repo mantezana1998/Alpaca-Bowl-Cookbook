@@ -42,6 +42,7 @@ h1 {
   background: white;
   color: white;
   font-size: 30px;
+  justify-self: end;
 }
 
 #lets-eat{
