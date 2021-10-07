@@ -1,8 +1,46 @@
+*{
+    text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 body {
-    background-image: url('https://i.imgur.com/OKN8Mu8.jpg');
+    /* background-image: url('https://i.imgur.com/OKN8Mu8.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    font-family: cursive;
+    background-size: 100% 100%; 
+    font-family: cursive; */
+    /* display: flex; */
     height: 100vh;
     text-align: center;
+}
+
+a:hover{
+    font-size: 25px;
+    color: white;
+    background: red; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#recipe{
+    color:white;
+    background-color: black;
+}
+
+.right-box{
+    color: white;
+    background-color: black;
+}
+
+.left-box{
+    color: red;
 }

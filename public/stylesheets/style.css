@@ -14,7 +14,6 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
   color: white;
 }
 
@@ -25,3 +24,12 @@ body{
   align-self: center;
 }
 
+a:hover{
+  font-size: 30px;
+  color: white;
+  background: red; 
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

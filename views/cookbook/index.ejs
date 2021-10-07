@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <a href="/logout">
+        <a id='logout' href="/logout">
             Logout
         </a>
     </div>
@@ -20,7 +20,7 @@
                 <%= r.recipe %>
             </h1>
 
-            <a href="/cookbook/<%= r._id %> ">
+            <a id='recipe-tag' href="/cookbook/<%= r._id %>">
                 Recipe
             </a>
         </ul>
