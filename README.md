@@ -6,7 +6,7 @@ SCREENSHOTS OF WEBSITE
 
 # Technologies used to make this project
 
-HTML, CSS, JavaScript, Node.js, Mongo DB, Mongo DB Atlas, and Mongoose.
+HTML, CSS, JavaScript, Node.js, Mongo DB, and Mongoose.
 
 
 Explore recipes here: https://alpaca-bowl-cookbook.herokuapp.com/
