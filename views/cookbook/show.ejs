@@ -22,10 +22,10 @@
   </nav>
     <div id='recipe'><%= recipe.recipe %></div>
     <section><br>
-      <main>
-        <div class="right-box">Ingredient:</div>
+      <main class="flex-ctrl">
+        <div class="right-box">Ingredients</div>
         <div class="right-box"><%= recipe.ingredient %></div>
-        <div class="right-box">Instruction:</div>
+        <div class="right-box">Instructions</div>
         <div class="right-box"><%= recipe.instruction %></div>
     </main>
     <aside>
@@ -34,7 +34,7 @@
     </aside>
   </section><br>
 
-  <footer>
+  <footer class="flex-ctrl">
     <h2>How did you like it?</h2>
     <form
       id="add-review-form"

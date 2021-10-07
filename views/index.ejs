@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="stylesheets/style.css"/>
     <title>Alpaca Bowl Cookbook</title>
 </head>
+<header>
+    <div id='title'>
+        <h3>Alpaca Bowl</h3>
+    </div>
+    <div>
+            <a id='login' href="/auth/google">
+                Login
+            </a>
+    </div>
+</header>
 <body>
+    <br>
     <h1 class='box'>Alpaca Bowl</h1>
     <h3 class='box'>
         <% if(user) { %>
-          <a class='button' href="/auth/google">Login</a>
+          <a href="/auth/google">Login</a>
         <% }else{ %>
         <a href="/auth/google">Login</a>
         <% } %>

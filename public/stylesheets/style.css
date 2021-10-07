@@ -1,8 +1,17 @@
 *{
   text-align: center;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+header{
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 body{
@@ -11,25 +20,26 @@ body{
   background-size: 100% 100%;
   font-family: cursive;
   height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   color: white;
 }
 
 .box{
-  background-color: black;
+  background-color: red;
   padding: 10px;
   width: 50%;
-  align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 a:hover{
   font-size: 30px;
   color: white;
   background: red; 
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
