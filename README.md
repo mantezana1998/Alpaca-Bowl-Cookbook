@@ -1,34 +1,19 @@
-# passport-boilerplate
+# Alpaca Bowl Cookbook
+
+Alpaca bowl cookbook is a Peruvian cookbook with authentic and traditional Peruvian recipes. My love for cooking Peruvian food inspired me to share my delicious recipes for everyone to make at the comfort of their own home. Listed in my cookbook are my favorite recipes I like to make for my friends and family.
+
+SCREENSHOTS OF WEBSITE
+
+# Technologies used to make this project
+
+HTML, CSS, JavaScript, Node.js, Mongo DB, and Mongoose.
 
 
-This is your passport boilerplate.
+Explore recipes here: https://alpaca-bowl-cookbook.herokuapp.com/
 
-## Setup 
+# Planned Future Enhancements
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
-
-
-#### Setup your git repo
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin master`
-
-#### Setup your login
-
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
-
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+1) Create photoslide of different recipes
+2) Add a logo with an alpaca
+3) Display peruvian music in the background
+4) Add 10-15 recipes
