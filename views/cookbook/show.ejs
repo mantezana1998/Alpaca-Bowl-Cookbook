@@ -7,102 +7,104 @@
   <link rel="stylesheet" href="/stylesheets/show/style.css"/>
   <title>Recipe</title>
 </head>
-<header>
-  <div>
-    <a id="back-to-recipes" href="/cookbook">
-      Back to Recipes
-    </a>
-  </div>
-  <div>
-    <a id="logout" href="/logout">
-    Logout
-    </a>
-  </div>
-</header>
 <body>
-    <div id='recipe'><%= recipe.recipe %></div>
-    <br>
-    <div class="right-box">Ingredient:</div>
-    <div class="right-box"><%= recipe.ingredient %></div>
-    <div class="right-box">Instruction:</div>
-    <div class="right-box"><%= recipe.instruction %></div>
-    <div class="left-box">Description:</div>
-    <div class="left-box"><%= recipe.description %></div>
-  </section>
-  
-  <br>
-  <h2>How did you like it?</h2>
-  <form
-    id="add-review-form"
-    method="POST"
-    action="/cookbook/<%= id %>/reviews"
-    >
-    <label>Review:</label>
-    <textarea name="description"></textarea>
-    <label>Rating:</label>
-    <select name="rating">
-       <!-- The name property is the key on req.body in our controller function that form is submitting to -->
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5" selected>5</option>
-    </select>
-    <input type="submit" value="Add Review" />
-  </form>
-  
-  <% if (recipe.review.length) { %>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Review</th>
-          <th>Rating</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% recipe.review.forEach(function(r) { %>
-          <tr>
-            <td><%= r.description %></td>
-            <td><%= r.rating %></td>
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h5>No Reviews Yet</h5>
-  
-    <% } %>
-
-  <% recipe.review.forEach(function(r) { %>
-    <div class="comment">
-      <%= r.description %>
-      <%= r.rating %> <br>
-      <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-          <button type="submit">X</button>
-        </form>
-    </div>
-  <% }) %>
-
-  <% recipe.review.forEach(function(r){ %> 
+  <nav>
     <div>
-      <form action="/reviews/<%= r._id %>?_method=PUT"    method="POST">
-        <button type='submit'>Update Comment</button>
-        <input type="text" 
-          name="description" 
-          value="<%= r.description %>"
-        >
-        <select name="rating" 
-        value='<%= r.rating %>'
-        >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5" selected>5</option>
-        </select>
-      </form>
+      <a id="back-to-recipes" href="/cookbook">
+        Back to Recipes
+      </a>
     </div>
-  <% }) %>
+    <div>
+      <a id="logout" href="/logout">
+      Logout
+      </a>
+    </div>
+  </nav>
+    <div id='recipe'><%= recipe.recipe %></div>
+    <section><br>
+      <main>
+        <div class="right-box">Ingredient:</div>
+        <div class="right-box"><%= recipe.ingredient %></div>
+        <div class="right-box">Instruction:</div>
+        <div class="right-box"><%= recipe.instruction %></div>
+    </main>
+    <aside>
+      <div class="left-box">Description:</div>
+      <div class="left-box"><%= recipe.description %></div>
+    </aside>
+  </section><br>
+
+  <footer>
+    <h2>How did you like it?</h2>
+    <form
+      id="add-review-form"
+      method="POST"
+      action="/cookbook/<%= id %>/reviews"
+      >
+      <label>Review:</label>
+      <textarea name="description"></textarea>
+      <label>Rating:</label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+      </select>
+      <input type="submit" value="Add Review" />
+    </form>
+    
+    <% if (recipe.review.length) { %>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Review</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% recipe.review.forEach(function(r) { %>
+            <tr>
+              <td><%= r.description %></td>
+              <td><%= r.rating %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <h5>No Reviews Yet</h5>
+    
+      <% } %>
+
+    <% recipe.review.forEach(function(r) { %>
+      <div class="comment">
+        <%= r.description %>
+        <%= r.rating %> <br>
+        <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+          </form>
+      </div>
+    <% }) %>
+
+    <% recipe.review.forEach(function(r){ %> 
+      <div>
+        <form action="/reviews/<%= r._id %>?_method=PUT"    method="POST">
+          <button type='submit'>Update Comment</button>
+          <input type="text" 
+            name="description" 
+            value="<%= r.description %>">
+          <select name="rating" 
+          value='<%= r.rating %>'>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+          </select>
+        </form>
+      </div>
+    <% }) %>
+  </footer>
 </body>
 </html><section id="show-page">  
