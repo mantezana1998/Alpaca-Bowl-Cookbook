@@ -15,5 +15,5 @@ Explore recipes here: https://alpaca-bowl-cookbook.herokuapp.com/
 
 1) Create photoslide of different recipes
 2) Add a logo with an alpaca
-3) display peruvian music in the background
-4) add 10-15 recipes
+3) Display peruvian music in the background
+4) Add 10-15 recipes
