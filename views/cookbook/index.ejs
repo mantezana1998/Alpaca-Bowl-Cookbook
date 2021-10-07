@@ -1,23 +1,23 @@
-<%- include('../partial/header') %>
-<div>
-    <a id='logout' href="/logout">
-        Logout
-    </a>
-</div>
-<% recipe.forEach(function(r){ %> 
+<%- include('../partial/header') %> 
 
-    <ul>
-        <h1 id='recipe-title'>
-            <%= r.recipe %>
-        </h1>
-
-        <a id='recipe-tag' href="/cookbook/<%= r._id %>">
-            Recipe
+    <!-- <div>
+        <a id='logout' href="/logout">
+            Logout
         </a>
-    </ul>
-
-<% }); %> 
-
-<%- include('../partial/footer') %>
-
+    </div> -->
+    <% recipe.forEach(function(r){ %> 
     
+        <ul>
+            <h1 id='recipe-title'>
+                <%= r.recipe %>
+            </h1>
+
+            <a id='recipe-tag' href="/cookbook/<%= r._id %>">
+                Recipe
+            </a>
+        </ul>
+
+    <% }); %> 
+
+    <%- include('../partial/footer') %> 
+

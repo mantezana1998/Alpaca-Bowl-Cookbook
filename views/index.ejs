@@ -7,28 +7,36 @@
     <link rel="stylesheet" href="stylesheets/style.css"/>
     <title>Alpaca Bowl Cookbook</title>
 </head>
-<header>
-    <div id='title'>
-        <h3>Alpaca Bowl</h3>
-    </div>
-    <div>
+<body>
+    <nav>
+        <div id='title'>
+            <h3>Alpaca Bowl</h3>
+        </div>
+        <div>
             <a id='login' href="/auth/google">
                 Login
             </a>
-    </div>
-</header>
-<body>
+        </div>
+    </nav>
     <br>
-    <h1 class='box'>Alpaca Bowl</h1>
+    <h1 class='box'>
+        Alpaca Bowl Cookbook
+    </h1>
+
     <h3 class='box'>
+        
         <% if(user) { %>
-          <a href="/auth/google">Login</a>
+          <a href="/auth/google">
+            Login
+        </a>
         <% }else{ %>
-        <a href="/auth/google">Login</a>
+        <a href="/auth/google">
+            Login
+        </a>
         <% } %>
-        </h3>
-    <h3 class='box' id='lets-eat'>Let's Eat!</h3>
-    <h3 class='box' id='quote'>good food ends with good talk</h3>
+    </h3>
+    <a href='/auth/google' class='box' id='lets-eat'>See All Recipes</a>
+
 </body>
 </html>
 
