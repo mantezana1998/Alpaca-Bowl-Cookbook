@@ -6,7 +6,7 @@ Alpaca bowl cookbook is a Peruvian cookbook with authentic and traditional Peruv
 
 # Technologies used to make this project
 
-HTML, CSS, JavaScript, Node.js, Mongo DB, and Mongoose.
+HTML, CSS, JavaScript, Node.js, Express, Mongo DB, and Mongoose.
 
 
 Explore recipes here: https://alpaca-bowl-cookbook.herokuapp.com/
