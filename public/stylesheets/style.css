@@ -30,17 +30,17 @@ body{
 }
 
 #title{
-  color: black;
+  color: white;
   text-decoration: underline;
 }
 
 .box{
-  color: black;
-  margin: 20px;
+  color: white;
+  background-color: black;
+  margin: 40px;
   padding: 10px; 
   display: flex;
   flex-direction: column;
-  justify-content: end;
 }
 
 a:hover{
@@ -53,7 +53,8 @@ a:hover{
 }
 
 a:link{
-  color: black;
+  color: white;
+  background-color: black;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -62,13 +63,14 @@ a:link{
 
 #recipe-title{
   margin: 40px;
-  color:black;
+  color:white;
+  background-color: black;
   display: flex;
   flex-direction: column;
 } 
 
 #recipe-link{
-  color:black;
+  color:white;
   display: flex;
   flex-direction: column;
 }  

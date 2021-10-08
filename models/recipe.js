@@ -11,7 +11,7 @@ const recipeSchema = new mongoose.Schema ({
     recipe: String,
     slug: String,
     ingredient: Array,
-    instruction: Array,
+    instruction: String,
     description: String,
     picture: String,
     review: [reviewSchema],

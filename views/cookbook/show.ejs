@@ -3,7 +3,7 @@
     <div id='recipe'><h1><%= recipe.recipe %></h1></div>
     <section>
       <main>
-        <div class='ingredients'>Ingredients</div>
+        <h1 class='ingredients'>Ingredients</h1>
         <div class='ingredients'><%= recipe.ingredient %></div>
         <br>
         <h1 class='instructions'>Instructions</h1>
@@ -24,9 +24,10 @@
       id="add-review-form"
       method="POST"
       action="/cookbook/<%= id %>/reviews"
-      ><br>
+      >
       <label class="review">Review:</label>
       <textarea name="description"></textarea>
+      <br>
       <label class="review">Rating:</label>
       <select class="review" name="rating">
         <option value="1">1</option>
