@@ -40,22 +40,13 @@
     
     <% if (recipe.review.length) { %>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Review</th>
-            <th>Rating</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% recipe.review.forEach(function(r) { %>
-            <tr>
-              <td><%= r.description %></td>
-              <td><%= r.rating %></td>
-            </tr>
-          <% }); %>
-        </tbody>
-      </table>
+      <div>Review</div>
+      <div>Rating</div>
+        <% recipe.review.forEach(function(r) { %>
+        <div><%= r.description %></div>
+        <div><%= r.rating %></div>
+        <% }); %>
+
     <% } else { %>
       <h5>No Reviews Yet</h5>
     

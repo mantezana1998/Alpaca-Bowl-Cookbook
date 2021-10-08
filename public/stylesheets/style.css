@@ -112,6 +112,6 @@ main, aside{
 }
 
 .review{
-  color: red;
-  display: flex;
+  color: black;
+  background: white;
 }
