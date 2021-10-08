@@ -40,10 +40,10 @@
     
     <% if (recipe.review.length) { %>
 
-      <div class="review-description">Review</div>
-      <div class="review-rating">Rating</div>
         <% recipe.review.forEach(function(r) { %>
+        <div class="review-description">Review</div>
         <div class="review-description"><%= r.description %></div>
+        <div class="review-rating">Rating</div>
         <div class="review-rating"><%= r.rating %></div>
         <% }); %>
 
@@ -55,7 +55,7 @@
     <% recipe.review.forEach(function(r) { %>
       <div class="comment">
         <%= r.description %>
-        <%= r.rating %> <br>
+        <%= r.rating %>
         <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
             <button type="submit">X</button>
           </form>
