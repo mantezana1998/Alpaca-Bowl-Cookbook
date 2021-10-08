@@ -2,13 +2,7 @@
   text-align: center;
   margin: 0;
   box-sizing: border-box;
-  background-image: url('https://i.imgur.com/OKN8Mu8.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  font-family: cursive;
-  height: 100vh;
-  color: white;
-  margin: 10px;
+  
 }
 
 body > nav{
@@ -20,14 +14,28 @@ body > nav{
   justify-content: space-evenly;
 }
 
+body{
+  background-image: url('https://i.imgur.com/OKN8Mu8.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: cursive;
+  height: 100vh;
+  color: white;
+  margin: 10px;
+}
+
+.nav-button{
+  color: white;
+  font-size: 15px;
+}
+
+
 .box{
   background-color: black;
-  padding: 10px;
-  width: 40%;
+  padding: 10px; 
   display: flex;
   flex-direction: column;
   justify-content: end;
-  flex-basis: auto;
 }
 
 a:hover{
@@ -40,55 +48,64 @@ a:hover{
   border-bottom-right-radius: 5px;
 }
 
-/* nav {
-  grid-area: nav;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
-main{
-  grid-area: main;
-  justify-self: center;
-}
-
-aside{
-  grid-area: aside;
-}
-
-footer{
-  grid-area: footer;
-  display: flex;
-  justify-content: stretch;
-}
-
-#recipe{
-  color:white;
-  background-color: black;
-  height: 30px;
-  width: 60%;
-}
-
-.right-box{
-  color: white;
-  background-color: black;
-  width: 70%;
-}
-
-.left-box{
-  color: red;
-}
-
-.flex-ctrl{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 a:link{
   color: black;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+} 
+
+#recipe-title{
+  margin: 40px;
+  background-color: black;
+  width: 30%;
+  color:peru;
+  display: flex;
+  flex-direction: column;
+}
+
+#recipe-link{
+  width: 10%;
+  color:black;
+  display: flex;
+  flex-direction: row;
+}
+
+#recipe{
+  color:black;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.review{
+  color:black;
+}
+
+.ingredients{
+  color:white;
+  background-color: black;
+  flex-grow: 2;
+}
+
+.instructions{
+  color:white;
+  background-color: black;
+  flex-grow: 3;
+}
+
+.description{
+  color: white;
+  background-color: black;
+}
+
+section, main, aside {
+  display: flex;
+  padding: 10px;
+}
+
+main, aside{
+  flex-direction: column;
 }

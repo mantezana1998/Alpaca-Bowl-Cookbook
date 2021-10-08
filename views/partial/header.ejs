@@ -8,14 +8,28 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav" >
+    <nav>
 
-        <h3>Alpaca Bowl</h3>
+        <h3>
+        
+            Alpaca Bowl
+        
+        </h3>
         
         <% if(user) { %>
-           <a href="/auth/google">Login</a>
+
+           
+            <a class="nav-button" 
+                href="/auth/google">
+                Login
+            </a>
+           
             <% }else{ %>
-            <a href="/logout">Logout</a>
+           
+            <a class="nav-button"
+                href="/logout">
+                Logout
+            </a>
         
         <% } %>
     </nav>

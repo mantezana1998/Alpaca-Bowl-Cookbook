@@ -7,15 +7,26 @@
     <h3 class='box'>
         
         <% if(user) { %>
-          <a href="/auth/google">
+            
+          <a class="box" 
+            href='/auth/google'>
             Login
         </a>
-        <% }else{ %>
-        <a href="/auth/google">
-            Login
-        </a>
-        <% } %>
-    </h3>
-    <a href='/auth/google' class='box' id='lets-eat'>See All Recipes</a>
 
-    <%- include('./partial/footer') %> 
+        <% }else{ %>
+
+        <a class='box' 
+            href='/auth/google'>
+            Login
+        </a>
+
+        <% } %>
+
+    </h3>
+
+    <a class='box'
+        href='/auth/google'>
+        See All Recipes
+    </a>
+
+<%- include('./partial/footer') %> 

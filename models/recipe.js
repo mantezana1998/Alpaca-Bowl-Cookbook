@@ -13,6 +13,7 @@ const recipeSchema = new mongoose.Schema ({
     ingredient: Array,
     instruction: Array,
     description: String,
+    picture: String,
     review: [reviewSchema],
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 });

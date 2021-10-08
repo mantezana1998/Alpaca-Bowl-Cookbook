@@ -1,30 +1,34 @@
 <%- include('../partial/header') %> 
 
-    <div id='recipe'><%= recipe.recipe %></div>
-    <section><br>
-      <main class="flex-ctrl">
-        <div class="right-box">Ingredients</div>
-        <div class="right-box"><%= recipe.ingredient %></div>
-        <div class="right-box">Instructions</div>
-        <div class="right-box"><%= recipe.instruction %></div>
+    <div id='recipe'><h1><%= recipe.recipe %></h1></div>
+    <section>
+      <main>
+        <div class='ingredients'>Ingredients</div>
+        <div class='ingredients'><%= recipe.ingredient %></div>
+        <br>
+        <h1 class='instructions'>Instructions</h1>
+        <div class='instructions'><%= recipe.instruction %></div>
+        <br>
     </main>
     <aside>
-      <div class="left-box">Description:</div>
-      <div class="left-box"><%= recipe.description %></div>
+      <h1 class='description'>Description:</h1>
+      <div class='description'><%= recipe.description %></div>
+      <img src="<%= recipe.picture %>" alt="food">
     </aside>
+
   </section><br>
 
-  <footer class="flex-ctrl">
-    <h2>How did you like it?</h2>
+  <footer>
+    <h2 class="review">How did you like it?</h2>
     <form
       id="add-review-form"
       method="POST"
       action="/cookbook/<%= id %>/reviews"
-      >
-      <label>Review:</label>
+      ><br>
+      <label class="review">Review:</label>
       <textarea name="description"></textarea>
-      <label>Rating:</label>
-      <select name="rating">
+      <label class="review">Rating:</label>
+      <select class="review" name="rating">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
