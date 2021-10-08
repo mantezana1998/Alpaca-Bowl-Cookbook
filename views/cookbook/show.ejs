@@ -54,7 +54,7 @@
       <% } %>
 
     <% recipe.review.forEach(function(r) { %>
-      <div class="comment">
+      <div class="review">
         <%= r.description %>
         <%= r.rating %>
         <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
