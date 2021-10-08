@@ -56,16 +56,20 @@
       <div class="comment">
         <%= r.description %>
         <%= r.rating %> <br>
-        <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+        <div>
+          <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
             <button type="submit">X</button>
           </form>
+        </div>
       </div>
     <% }) %>
 
     <% recipe.review.forEach(function(r){ %> 
       <div>
         <form action="/reviews/<%= r._id %>?_method=PUT"    method="POST">
-          <button type='submit'>Update Comment</button>
+          <div></div>
+           <button type='submit'>Update Comment</button>
+          </div>  
           <input type="text" 
             name="description" 
             value="<%= r.description %>">
