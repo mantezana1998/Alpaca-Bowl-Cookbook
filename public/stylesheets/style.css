@@ -115,3 +115,13 @@ main, aside{
   color: black;
   background: white;
 }
+
+.review-description{
+  display: flex;
+  flex-direction: row;
+}
+
+.review-rating{
+  display: flex;
+  flex-direction: row;
+}

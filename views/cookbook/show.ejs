@@ -40,11 +40,11 @@
     
     <% if (recipe.review.length) { %>
 
-      <div>Review</div>
-      <div>Rating</div>
+      <div class="review-description">Review</div>
+      <div class="review-rating">Rating</div>
         <% recipe.review.forEach(function(r) { %>
-        <div><%= r.description %></div>
-        <div><%= r.rating %></div>
+        <div class="review-description"><%= r.description %></div>
+        <div class="review-rating"><%= r.rating %></div>
         <% }); %>
 
     <% } else { %>
@@ -56,20 +56,16 @@
       <div class="comment">
         <%= r.description %>
         <%= r.rating %> <br>
-        <div>
-          <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+        <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
             <button type="submit">X</button>
           </form>
-        </div>
       </div>
     <% }) %>
 
     <% recipe.review.forEach(function(r){ %> 
       <div>
         <form action="/reviews/<%= r._id %>?_method=PUT"    method="POST">
-          <div></div>
-           <button type='submit'>Update Comment</button>
-          </div>  
+          <button type='submit'>Update Comment</button>
           <input type="text" 
             name="description" 
             value="<%= r.description %>">
