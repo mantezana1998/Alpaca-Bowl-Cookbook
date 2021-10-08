@@ -29,9 +29,14 @@ body{
   font-size: 15px;
 }
 
+#title{
+  color: black;
+  text-decoration: underline;
+}
 
 .box{
-  background-color: black;
+  color: black;
+  margin: 20px;
   padding: 10px; 
   display: flex;
   flex-direction: column;
@@ -39,9 +44,8 @@ body{
 }
 
 a:hover{
-  font-size: 25px;
-  color: white;
-  background: red; 
+  font-size: 45px;
+  color: white; 
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -58,19 +62,16 @@ a:link{
 
 #recipe-title{
   margin: 40px;
-  background-color: black;
-  width: 30%;
-  color:peru;
-  display: flex;
-  flex-direction: column;
-}
-
-#recipe-link{
-  width: 10%;
   color:black;
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: column;
+} 
+
+#recipe-link{
+  color:black;
+  display: flex;
+  flex-direction: column;
+}  
 
 #recipe{
   color:black;
@@ -108,4 +109,9 @@ section, main, aside {
 
 main, aside{
   flex-direction: column;
+}
+
+.review{
+  color: red;
+  display: flex;
 }
