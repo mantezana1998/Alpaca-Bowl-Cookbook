@@ -19,7 +19,7 @@
   </section><br>
 
   <footer>
-    <h2 class="review">How did you like it?</h2>
+    <h1 class="review">How did you like it?</h1>
     <form
       id="add-review-form"
       method="POST"
@@ -42,9 +42,9 @@
     <% if (recipe.review.length) { %>
 
         <% recipe.review.forEach(function(r) { %>
-        <div class="review-description">Review</div>
-        <div class="review-description"><%= r.description %></div>
-        <div class="review-rating">Rating</div>
+        <h3 class="review-description">Review</h3>
+        <p class="review-description"><%= r.description %></p>
+        <h3 class="review-rating">Rating</h3>
         <div class="review-rating"><%= r.rating %></div>
         <% }); %>
 
