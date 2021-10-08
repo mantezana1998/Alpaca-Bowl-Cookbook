@@ -17,4 +17,3 @@ Explore recipes here: https://alpaca-bowl-cookbook.herokuapp.com/
 2) Add a logo of an alpaca
 3) Display peruvian music in the background
 4) Add 10-15 recipes, including mixed drinks
-5) 
