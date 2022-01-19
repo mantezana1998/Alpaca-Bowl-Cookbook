@@ -1,28 +1,23 @@
 <%- include('./partial/header') %> 
-    <br>
-    <h1 id='title' 
-        class='box'>
-        Alpaca Bowl Cookbook
-    </h1>
 
-    <h3 class='box'>
-        
-        <% if (user) { %>
-            
-          <a class="box" 
-            href='/auth/google'>
-            Login
-        </a>
+<main>
+    <div id='machu-picchu'>
+      <img src="https://i.imgur.com/OKN8Mu8.jpg" height='50%' width='100%'>
+    </div>
 
-        <% }else{ %>
+    <div class="history">
+      <div class='la-cabana'>
+        <img src="https://i.imgur.com/BRVdTFl.jpg" width='600' height='600'>
+        <div class='history-text'>
+          <h1>A Little History</h1>
+          <br>
+          <p>Alpaca Bowl is inspired by my grandparents, Maximo Antezana and Julia Antezana. They owned La Cabanita for over 60 years in a small town called Chincha Alta, Peru. In 2008, an earthquake hit Peru and destroyed La Cabanita. But, despite only being closed for 6 months, La Cabanita was restored and ready to serve the locals of Chincha Alta.</p>
+          <br>
+          <p>Alpaca Bowl Cookbook's recipes are filled with flavorful recipes for the whole family. Enjoy!</p>
+        </div>
+      </div>
+    </div>
 
-            <a class='box'
-            href='/auth/google'>
-            See All Recipes
-        </a>
-
-        <% } %>
-
-    </h3>
+  </main>
 
 <%- include('./partial/footer') %> 
