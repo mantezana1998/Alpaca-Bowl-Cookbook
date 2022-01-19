@@ -10,6 +10,16 @@
   text-align: center;
 }
 
+.la-cabana {
+  display: flex;
+  flex-direction: row;
+  margin: 150px;
+}
+
+.history-text {
+  margin: 30px;
+}
+
 .wrapper {
   position: fixed;
   top: 0;
