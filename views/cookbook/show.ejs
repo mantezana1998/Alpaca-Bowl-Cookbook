@@ -13,9 +13,9 @@
           <img src='<%=recipe.picture %>' alt="food" width='600' height='400'>
           <div id='ingredients'>
             <h1>Ingredients</h1>
-            <% recipe.ingredients.forEach((r)=>{ %> 
+            <% recipe.forEach((r)=>{ %> 
             <ul>
-              <li><%=r %></li>
+              <li><%=r.ingredients %></li>
             </ul>
             <% }) %> 
           </div>
