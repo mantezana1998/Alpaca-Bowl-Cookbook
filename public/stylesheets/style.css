@@ -275,6 +275,25 @@ input[type="checkbox"] {
   opacity: 0.5;
 }
 
+/* Show Recipe Page */
+
+.recipe {
+  margin: 40px;
+}
+
+.recipe-process {
+  display: flex;
+  flex-direction: row;
+}
+
+#ingredients, #instructions {
+  margin: 50px;
+}
+
+#ingredients{
+  list-style-type: circle;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
 footer {
