@@ -269,10 +269,7 @@ input[type="checkbox"] {
 
 footer {
   font-family: Open Sans;
-  position:fixed;
-  left:0px;
   bottom:0px;
-  z-index:1;
   width:100%;
 }
 
