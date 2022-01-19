@@ -1,17 +1,20 @@
 <%- include('../partial/header') %> 
 
-    <% recipe.forEach(function(r){ %> 
+<% recipe.forEach(function(r){ %>
+
+    <p class="heading">CSS Gallery</p>
+    <a href="/cookbook/<%= r._id %>"><div class="gallery-image">
+      <div class="img-box">
+        <img src="<%= r.picture %>" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p><%= r.recipe %></p>
+            <p class="opacity-low"><%= r.description %> </p>
+          </div>
+        </div> 
+      </div></a>
+    </div>
     
-        <ul>
-            <h1 id='recipe-title'>
-                <%= r.recipe %>
-            </h1>
-
-            <a id='recipe-link' href="/cookbook/<%= r._id %>">
-                Recipe
-            </a>
-        </ul>
-
-    <% }); %> 
+    <% }) %>  
 
     <%- include('../partial/footer') %> 

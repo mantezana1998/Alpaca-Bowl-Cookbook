@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Alpaca Bowl Cookbook</title>
-</head>
-<body>
-    <nav>
-
-        <h3>
-        
-            Alpaca Bowl
-        
-        </h3>
-
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
+    <h1 id='head-title'>Alpaca Bowl</h1>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><span></span></label>
+      <label for="active" class="close"></label>
+      <div class="wrapper">
         <% if (user) { %>
-
-           
-            <a class="nav-button" 
-                href="/logout">
-                Logout
-            </a>
-           
-            <% } else { %>
-           
-            <a class="nav-button"
-                href="/auth/google">
-                Login with Google
-            </a>
-        
-        <% } %>
-    </nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cookbook">Cookbook</a></li>
+                <li><a class="box" href='/auth/google'>Login</a></li>
+              </ul>
+    
+          <% }else{ %>
+    
+              <li><a class='box' href='/auth/google'>See All Recipes</a></li>
+    
+          <% } %>
+      </div>
+    </header>
