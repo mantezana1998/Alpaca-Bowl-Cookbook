@@ -1,35 +1,33 @@
 <%- include('../partial/header') %> 
 
-  <div id='recipe'>
-    <h1>
-      <%= recipe.recipe %>
-    </h1>
-  </div>
-  <section>
-    <main>
-      <h1 class='ingredients'>
-        Ingredients
-      </h1>
-      <div class='ingredients'>
-        <%= recipe.ingredient %>
-      </div><br>
-      <h1 class='instructions'>
-        Instructions
-      </h1>
-      <div class='instructions'>
-        <%= recipe.instruction %>
-      </div><br>
-    </main>
-      <aside>
-        <h1 class='description'>
-          Description:
-        </h1>
-        <div class='description'>
-          <%= recipe.description %>
+  <main>
+
+    <div class='recipe'>
+      <div class='recipe-info'>
+        <h1><%= recipe.recipe %></h1>
+        <br>
+        <p><%= recipe.description %></p>
+      </div>
+
+        <div class='recipe-process'>
+          <img src='https://i.imgur.com/ly4HNkq.jpg' alt="food" width='600' height='400'>
+          <div id='ingredients'>
+            <h1>Ingredients</h1>
+            <% recipe.ingredients.forEach((r)=>{ %> 
+            <ul>
+              <li><%=r %></li>
+            </ul>
+            <% }) %> 
+          </div>
+          <div id='instructions'>
+            <h1>Instructions</h1>
+            <p><%= recipe.instructions %> </p>
+          </div>
+          </div>
         </div>
-        <img src="<%= recipe.picture %>" alt="food">
-      </aside>
-  </section><br>
+    </div>
+
+  </main>
   <footer>
     <h1 class="review">
       How did you like it?
