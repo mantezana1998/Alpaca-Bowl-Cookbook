@@ -41,6 +41,23 @@
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-333?style=flat&logo=postgresql)
 ![Materialize CSS](https://img.shields.io/badge/-Materialize_CSS-333?style=flat&logo=materialdesign) 
 
+<h2> :atom_symbol: Getting Started </h2>
+
+<h3> :calling: Instructions </h3>
+<details open>
+<summary>How to see recipes</summary>
+<ol>
+<li>Click the hamburger menu on the top right corner of the page.</li>
+<li>Log into your gmail (not spam).</li>
+<li>Select any recipe you want to see!</li>
+</ol>
+</details>
+
+<details open>   
+<summary>Deployed Link (Heroku)</summary>
+<a href="https://alpaca-bowl-cookbook.herokuapp.com/">https://alpaca-bowl-cookbook.herokuapp.com/</a>
+</details>
+
 ## :fast_forward: Next Steps   
 
 ### Upcoming Features
