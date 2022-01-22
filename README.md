@@ -19,8 +19,8 @@
 <h1>Screenshots</h1>
 <details open>
 <summary> :gear: Functionality</summary>
-<h3 align="center">Home Page</h3><img src="https://i.imgur.com/Y8gU1kB.png" width="700"/> 
-<h3 align="center">Recipe!</h3><img src="https://i.imgur.com/NSUCDcP.png" width="700"/> 
+<h3 align="center">Home Page</h3><img src="https://i.imgur.com/qwf0hR5.png" width="700"/> 
+<h3 align="center">Recipe!</h3><img src="https://i.imgur.com/sIL5x0a.png" width="700"/> 
 </details>
 
 ## :computer: Technologies Used
