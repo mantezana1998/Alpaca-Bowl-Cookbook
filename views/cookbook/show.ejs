@@ -2,134 +2,98 @@
 
   <main>
 
-    <div class='recipe'>
-      <div class='recipe-info'>
-        <h1><%= recipe.recipe %></h1>
-        <br>
-        <p><%= recipe.description %></p>
+    <div id="recipe">
+      <div id="recipe-image">
+        <img src='<%=recipe.picture %>' alt="food" width='600' height='400'>
       </div>
 
-        <div class='recipe-process'>
-          <img src='<%=recipe.picture %>' alt="food" width='600' height='400'>
-          <div id='ingredients'>
-            <h1>Ingredients</h1>
-            <ul>
-              <li><%=recipe.ingredient %></li>
-            </ul>
-          </div>
-          <div id='instructions'>
-            <h1>Instructions</h1>
-            <p><%= recipe.instruction %> </p>
-          </div>
-          </div>
+      <div id="food-info">
+        <div id="ingredients">
+          <h1>Ingredients</h1>
+          <p><%= recipe.ingredient %> </p>
         </div>
+
+        <div id="instructions">
+          <h1>Instructions</h1>
+          <p><%= recipe.instruction %> </p>
+        </div>
+      </div>
     </div>
 
   </main>
-  <footer>
-    <h1 class="review">
-      How did you like it?
-    </h1>
-    <form
-      id="add-review-form"
-      method="POST"
-      action="/cookbook/<%= id %>/reviews"
-      >
-      <label class="review">
-        Review:
-      </label>
-      <textarea name="description"></textarea><br>
-      <label class="review">
-        Rating:
-      </label>
-      <select class="review" name="rating">
-        <option value="1">
-          1
-        </option>
-        <option value="2">
-          2
-        </option>
-        <option value="3">
-          3
-        </option>
-        <option value="4">
-          4
-        </option>
-        <option value="5" selected>
-          5
-        </option>
-      </select>
-      <input type="submit" value="Add Review" />
-    </form>
+
+  <article>
+
+    <h1>Reviews</h1>
+
+    <% if (recipe.review.length) {  %>
+
+      <% recipe.review.forEach(function(r){ %>
+
+        <h3>Review</h3>
+        <p><%= r.description %> </p>
+        <h3>Rating</h3>
+        <p><%= r.rating %> </p>
+      
+      <% }) %> 
     
-    <% if (recipe.review.length) { %>
-
-        <% recipe.review.forEach(function(r) { %>
-          <h3 class="review-description">
-            Review
-          </h3>
-          <p class="review-description">
-            <%= r.description %>
-          </p>
-          <h3 class="review-rating">
-            Rating
-          </h3>
-          <div class="review-rating">
-            <%= r.rating %>
-          </div>
-        <% }); %>
-
     <% } else { %>
 
-      <h5>
-        No Reviews Yet
-      </h5>
+      <h5>Be the first to leave a review!</h5>
     
       <% } %>
 
     <% recipe.review.forEach(function(r) { %>
 
-      <div class="review">
+      <div>
         <%= r.description %>
         <%= r.rating %>
         <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-            <button type="submit">
-              X
-            </button>
-          </form>
+            <button type="submit"> X </button>
+        </form>
       </div>
     <% }) %>
 
     <% recipe.review.forEach(function(r){ %> 
       <div>
-        <form action="/reviews/<%= r._id %>?_method=PUT"    method="POST">
-          <button type='submit'>
-            Update Comment
-          </button>
-          <input type="text" 
-            name="description" 
-            value="<%= r.description %>">
-          <select name="rating" 
-          value='<%= r.rating %>'>
-            <option value="1">
-              1
-            </option>
-            <option value="2">
-              2
-            </option>
-            <option value="3">
-              3
-            </option>
-            <option value="4">
-              4
-            </option>
-            <option value="5" selected>
-              5
-            </option>
+        <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
+          <button type='submit'>Update Comment</button>
+          <input type="text" name="description" value="<%= r.description %>">
+          <select name="rating" value='<%= r.rating %>'>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
           </select>
         </form>
       </div>
     <% }) %>
-  </footer>
+
+    <br>
+    <br>
+    <br>
+    <h1>Add a review</h1>
+
+    <form method="POST" action="/cookbook/<%= id %>/reviews">
+      <br>
+      <br>
+      <label>
+        <h2>Your Review </h2>
+      </label>
+      <textarea name="description" cols="40" rows="3"></textarea>
+      <label>
+        <h2>Rate the recipe</h2>
+      </label>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input type="submit" value="Submit Review">
+    </form>
+  </article>
 
 <%- include('../partial/footer') %> 
