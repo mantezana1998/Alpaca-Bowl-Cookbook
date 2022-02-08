@@ -2,27 +2,42 @@
 
   <main>
 
-    <h1 id="recipe-name"><%= recipe.recipe %> </h1>
-    <div id="recipe">
-      <div id="recipe-image">
-        <img src='<%=recipe.picture %>' alt="food" width='600' height='400'>
+    <div>
+      <img src='<%=recipe.picture %>' id="recipe-image" alt="food" width='600' height='400'>
+    </div>
+
+    <div id="recipe-name">
+      <h1><%= recipe.recipe %> </h1>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span><h4><%= recipe.review.length %> Reviews</h4></span>
+    </div>
+    <div id="recipe-description">
+      <h4><%= recipe.description %> </h4>
+    </div>
+    <div id="food-info">
+      <div id="ingredients">
+        <h1>Ingredients</h1>
+        <p><%= recipe.ingredient %> </p>
       </div>
 
-      <div id="food-info">
-        <div id="ingredients">
-          <h1>Ingredients</h1>
-          <p><%= recipe.ingredient %> </p>
-        </div>
-
-        <div id="instructions">
-          <h1>Instructions</h1>
-          <p><%= recipe.instruction %> </p>
-        </div>
+      <div id="instructions">
+        <h1>Directions</h1>
+        <p><%= recipe.instruction %> </p>
       </div>
     </div>
+    <br>
+    <br>
 
   </main>
 
+
+  <hr>
+  <br>
+  
   <article>
 
     <div class="reviews">
