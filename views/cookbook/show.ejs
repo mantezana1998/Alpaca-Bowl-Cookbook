@@ -70,29 +70,40 @@
       
         <% } %>
 
+      <h1>Delete Your Reviews</h1>
+
       <% recipe.review.forEach(function(r) { %>
 
-        <div>
-          <%= r.description %>
-          <%= r.rating %>
+        <div class="review-card">
           <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-            <button type="submit"> X </button>
+            <p id="review-card-title"><span>Review</span><button type="submit">X</button></p>
+            <br>
+            <p><%= r.description %> </p>
           </form>
         </div>
+        
       <% }) %>
+
+      <h1>Update Your Reviews</h1>
 
       <% recipe.review.forEach(function(r){ %> 
         <div>
           <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
-            <button type='submit'>Update Comment</button>
-            <input type="text" name="description" value="<%= r.description %>">
-            <select name="rating" value='<%= r.rating %>'>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5" selected>5</option>
-            </select>
+            <div class="review-card">
+              <p id="review-card-title"><span>Review</span>Update Rating: <%= r.rating %> </p>
+              <br>
+              <select name="rating" value='<%= r.rating %>'>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+              </select>
+              <p><%= r.description %> </p>
+              <br>
+              <input type="text" name="description" value="Edit Review Here!">
+              <button type='submit'>Update Review</button>
+            </div>
           </form>
         </div>
       <% }) %>
