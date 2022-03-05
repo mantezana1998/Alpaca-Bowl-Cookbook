@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
+var StatsD = require('hot-shots');
+var dogstatsd = new StatsD();
+
+dogstatsd.increment('page.views')
 
 require('dotenv').config();
 
